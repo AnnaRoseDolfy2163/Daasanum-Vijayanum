@@ -1,7 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const { DASAN_SYSTEM_PROMPT } = require('./persona');
+const path = require('path');
+const { VIJAYAN_SYSTEM_PROMPT } = require('./persona');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -9,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Warn if API key is not configured
 if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY === 'your_openai_api_key_here') {
@@ -26,9 +28,9 @@ app.post('/chat', async (req, res) => {
       });
     }
 
-    // Prepend persona.js's DASAN_SYSTEM_PROMPT as a system role message
+    // Prepend persona.js's VIJAYAN_SYSTEM_PROMPT as a system role message
     const messages = [
-      { role: 'system', content: DASAN_SYSTEM_PROMPT },
+      { role: 'system', content: VIJAYAN_SYSTEM_PROMPT },
       ...history
     ];
 
@@ -40,7 +42,7 @@ app.post('/chat', async (req, res) => {
         'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
       },
       body: JSON.stringify({
-        model: 'gpt-4o-mini',
+        model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
         messages,
         temperature: 1.0,
         max_tokens: 300
@@ -54,7 +56,7 @@ app.post('/chat', async (req, res) => {
 
       // Return a friendly error message
       return res.status(500).json({
-        error: 'എന്താടാ വിജയാ, ചെറിയൊരു പ്രശ്നം പറ്റി! അല്പം കഴിഞ്ഞ് ഒന്നുകൂടി നോക്കാം. (Unable to get a response from Dasan. Please check your API key or try again later.)'
+        error: 'എന്താടാ ദാസാ, ചെറിയൊരു പ്രശ്നം പറ്റി! അല്പം കഴിഞ്ഞ് ഒന്നുകൂടി നോക്കാം. (Unable to get a response from Vijayan. Please check your API key or try again later.)'
       });
     }
 
