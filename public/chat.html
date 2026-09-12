@@ -9,21 +9,17 @@
 
   <title>എടാ വിജയാ.. എന്താടാ ദാസാ....</title>
 
-  <!-- =========================
-         SAME FONTS AS INDEX.HTML
-    ========================== -->
-
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=DM+Sans:wght@400;500;600&display=swap"
     rel="stylesheet">
 
-
   <style>
     /* =========================
-           RESET
-        ========================== */
+       RESET
+    ========================== */
 
     * {
       margin: 0;
@@ -33,29 +29,20 @@
 
 
     /* =========================
-           BODY
-        ========================== */
+       BODY
+    ========================== */
 
     body {
-
       min-height: 100vh;
 
       display: flex;
-
       align-items: center;
-
       justify-content: center;
 
       padding: 35px;
 
       font-family: "DM Sans", sans-serif;
-
       color: #1e2a3a;
-
-      /*
-             * SAME BLUE GRADIENT
-             * AS INDEX.HTML
-             */
 
       background: linear-gradient(180deg,
           #3b6cb7 0%,
@@ -65,23 +52,20 @@
           #ffffff 100%);
 
       background-attachment: fixed;
-
       overflow: hidden;
     }
 
 
     /* =========================
-           BACKGROUND GLOW
-        ========================== */
+       BACKGROUND GLOW
+    ========================== */
 
     body::before {
-
       content: "";
 
       position: fixed;
 
       width: 600px;
-
       height: 600px;
 
       border-radius: 50%;
@@ -92,7 +76,6 @@
           transparent 70%);
 
       top: -150px;
-
       right: -150px;
 
       z-index: -1;
@@ -100,13 +83,11 @@
 
 
     body::after {
-
       content: "";
 
       position: fixed;
 
       width: 500px;
-
       height: 500px;
 
       border-radius: 50%;
@@ -117,7 +98,6 @@
           transparent 70%);
 
       bottom: -150px;
-
       left: -150px;
 
       z-index: -1;
@@ -125,23 +105,19 @@
 
 
     /* =========================
-           MAIN CHAT WINDOW
-        ========================== */
+       MAIN CHAT WINDOW
+    ========================== */
 
     .chat-window {
-
       width: min(900px, 100%);
-
       height: min(720px, 88vh);
 
       display: flex;
-
       flex-direction: column;
 
       background: rgba(255, 255, 255, 0.94);
 
       border-radius: 32px;
-
       overflow: hidden;
 
       border: 1px solid rgba(255, 255, 255, 0.8);
@@ -153,53 +129,32 @@
 
 
     /* =========================
-           HEADER
-        ========================== */
+       HEADER
+    ========================== */
 
     header {
-
       padding: 25px 30px;
 
       background: #1e3a8a;
-
       color: #ffffff;
     }
 
 
     .header-title {
-
       font-family: "Chilanka", cursive;
 
       font-size: 30px;
-
       font-weight: 400;
 
       line-height: 1;
     }
 
 
-    .header-subtitle {
-
-      margin-top: 8px;
-
-      font-family: "DM Sans", sans-serif;
-
-      font-size: 9px;
-
-      letter-spacing: 3px;
-
-      text-transform: uppercase;
-
-      opacity: 0.7;
-    }
-
-
     /* =========================
-           CHAT AREA
-        ========================== */
+       CHAT AREA
+    ========================== */
 
     #chatBox {
-
       flex: 1;
 
       overflow-y: auto;
@@ -214,77 +169,28 @@
 
 
     /* =========================
-           SCROLLBAR
-        ========================== */
+       SCROLLBAR
+    ========================== */
 
     #chatBox::-webkit-scrollbar {
-
       width: 5px;
     }
 
-
     #chatBox::-webkit-scrollbar-track {
-
       background: transparent;
     }
 
-
     #chatBox::-webkit-scrollbar-thumb {
-
       background: #7ba3d9;
-
       border-radius: 10px;
     }
 
 
     /* =========================
-           INTRO TEXT
-        ========================== */
-
-    .chat-intro {
-
-      text-align: center;
-
-      margin-bottom: 32px;
-
-      padding-top: 5px;
-    }
-
-
-    .chat-intro h2 {
-
-      font-family: "Chilanka", cursive;
-
-      font-size: 40px;
-
-      font-weight: 400;
-
-      line-height: 1;
-
-      color: #1e3a8a;
-
-      transform: rotate(-1deg);
-    }
-
-
-    .chat-intro p {
-
-      margin-top: 10px;
-
-      font-family: "Chilanka", cursive;
-
-      font-size: 18px;
-
-      color: #64748b;
-    }
-
-
-    /* =========================
-           MESSAGE
-        ========================== */
+       MESSAGE
+    ========================== */
 
     .message {
-
       display: flex;
 
       width: 100%;
@@ -296,23 +202,20 @@
 
 
     .message.dasan {
-
       justify-content: flex-end;
     }
 
 
     .message.vijayan {
-
       justify-content: flex-start;
     }
 
 
     /* =========================
-           MESSAGE BUBBLE
-        ========================== */
+       MESSAGE BUBBLE
+    ========================== */
 
     .bubble {
-
       max-width: 72%;
 
       padding: 14px 18px;
@@ -320,7 +223,6 @@
       font-family: "Chilanka", cursive;
 
       font-size: 19px;
-
       line-height: 1.55;
 
       box-shadow:
@@ -331,7 +233,6 @@
     /* DASAN */
 
     .message.dasan .bubble {
-
       background: #f5d27d;
 
       color: #3d2e20;
@@ -344,7 +245,6 @@
     /* VIJAYAN */
 
     .message.vijayan .bubble {
-
       background: #c3d9f2;
 
       color: #1e3a8a;
@@ -355,11 +255,10 @@
 
 
     /* =========================
-           TIME
-        ========================== */
+       TIME
+    ========================== */
 
     .time {
-
       display: block;
 
       margin-top: 5px;
@@ -377,11 +276,10 @@
 
 
     /* =========================
-           LOADING
-        ========================== */
+       LOADING
+    ========================== */
 
     .loading {
-
       display: flex;
 
       justify-content: flex-start;
@@ -391,7 +289,6 @@
 
 
     .loading-bubble {
-
       background: #c3d9f2;
 
       color: #1e3a8a;
@@ -405,16 +302,16 @@
 
       font-size: 17px;
 
-      animation: breathing 1.5s ease-in-out infinite;
+      animation:
+        breathing 1.5s ease-in-out infinite;
     }
 
 
     /* =========================
-           INPUT AREA
-        ========================== */
+       INPUT AREA
+    ========================== */
 
     #inputBar {
-
       display: flex;
 
       gap: 10px;
@@ -429,11 +326,10 @@
 
 
     /* =========================
-           INPUT
-        ========================== */
+       INPUT
+    ========================== */
 
     #userInput {
-
       flex: 1;
 
       height: 50px;
@@ -460,7 +356,6 @@
 
 
     #userInput:focus {
-
       border-color: #7ba3d9;
 
       box-shadow:
@@ -469,7 +364,6 @@
 
 
     #userInput::placeholder {
-
       color: #94a3b8;
 
       font-family: "Chilanka", cursive;
@@ -477,11 +371,10 @@
 
 
     /* =========================
-           SEND BUTTON
-        ========================== */
+       SEND BUTTON
+    ========================== */
 
     #sendBtn {
-
       height: 50px;
 
       padding: 0 25px;
@@ -509,7 +402,6 @@
 
 
     #sendBtn:hover {
-
       background: #1e3a8a;
 
       transform: translateY(-2px);
@@ -520,19 +412,17 @@
 
 
     #sendBtn:active {
-
       transform: translateY(0);
     }
 
 
     /* =========================
-           ANIMATIONS
-        ========================== */
+       ANIMATIONS
+    ========================== */
 
     @keyframes messageIn {
 
       from {
-
         opacity: 0;
 
         transform:
@@ -540,7 +430,6 @@
       }
 
       to {
-
         opacity: 1;
 
         transform:
@@ -553,25 +442,22 @@
 
       0%,
       100% {
-
         opacity: 0.55;
       }
 
       50% {
-
         opacity: 1;
       }
     }
 
 
     /* =========================
-           MOBILE
-        ========================== */
+       MOBILE
+    ========================== */
 
     @media (max-width: 650px) {
 
       body {
-
         padding: 15px;
 
         overflow: auto;
@@ -579,7 +465,6 @@
 
 
       .chat-window {
-
         width: 100%;
 
         height: 92vh;
@@ -589,37 +474,21 @@
 
 
       header {
-
         padding: 21px 22px;
       }
 
 
       .header-title {
-
         font-size: 26px;
       }
 
 
       #chatBox {
-
         padding: 24px 18px;
       }
 
 
-      .chat-intro h2 {
-
-        font-size: 32px;
-      }
-
-
-      .chat-intro p {
-
-        font-size: 16px;
-      }
-
-
       .bubble {
-
         max-width: 84%;
 
         font-size: 18px;
@@ -627,13 +496,11 @@
 
 
       #inputBar {
-
         padding: 14px;
       }
 
 
       #userInput {
-
         min-width: 0;
 
         font-size: 17px;
@@ -641,9 +508,9 @@
 
 
       #sendBtn {
-
         padding: 0 18px;
       }
+
     }
   </style>
 
@@ -654,8 +521,8 @@
 
 
   <!-- =========================
-         CHAT WINDOW
-    ========================== -->
+       CHAT WINDOW
+  ========================== -->
 
   <main class="chat-window">
 
@@ -668,33 +535,14 @@
         ദാസനും വിജയനും
       </div>
 
-      <div class="header-subtitle">
-        ഒരു ചെറിയ സംഭാഷണം
-      </div>
-
     </header>
 
 
     <!-- =========================
-             CHAT MESSAGES
-        ========================== -->
+         CHAT MESSAGES
+    ========================== -->
 
     <div id="chatBox">
-
-
-      <!-- INTRO -->
-
-      <div class="chat-intro">
-
-        <h2 class="notranslate" translate="no">
-          എന്താടാ ദാസാ....
-        </h2>
-
-        <p>
-          പറയെടാ... എന്താ കാര്യം?
-        </p>
-
-      </div>
 
 
       <!-- FIRST VIJAYAN MESSAGE -->
@@ -718,8 +566,8 @@
 
 
     <!-- =========================
-             INPUT
-        ========================== -->
+         INPUT
+    ========================== -->
 
     <form id="inputBar">
 
@@ -736,8 +584,8 @@
 
 
   <!-- =========================
-         JAVASCRIPT
-    ========================== -->
+       JAVASCRIPT
+  ========================== -->
 
   <script>
 
@@ -777,7 +625,10 @@
       bubble.className =
         "bubble notranslate";
 
-      bubble.setAttribute("translate", "no");
+      bubble.setAttribute(
+        "translate",
+        "no"
+      );
 
 
       /*
@@ -826,6 +677,7 @@
 
       chatBox.scrollTop =
         chatBox.scrollHeight;
+
     }
 
 
@@ -931,7 +783,7 @@
         try {
 
           /*
-           * Send request to your backend
+           * Send request to backend
            */
 
           const response =
@@ -951,6 +803,7 @@
                     history:
                       history
                   })
+
               }
             );
 
@@ -964,6 +817,7 @@
             throw new Error(
               "Server error"
             );
+
           }
 
 
@@ -1010,8 +864,8 @@
 
           });
 
-
         }
+
 
         catch (error) {
 
@@ -1033,6 +887,7 @@
 
         }
 
+
         finally {
 
           /*
@@ -1042,6 +897,7 @@
           sendButton.disabled = false;
 
           input.focus();
+
         }
 
       }
@@ -1064,6 +920,7 @@
           e.preventDefault();
 
           form.requestSubmit();
+
         }
 
       }
