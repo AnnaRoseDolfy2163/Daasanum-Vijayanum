@@ -417,6 +417,42 @@
 
 
     /* =========================
+       RESET BUTTON
+    ========================== */
+
+    #resetBtn {
+      height: 50px;
+
+      padding: 0 18px;
+
+      border: 1px solid rgba(30, 58, 138, 0.18);
+
+      border-radius: 15px;
+
+      background: transparent;
+
+      color: #1e3a8a;
+
+      font-family: "DM Sans", sans-serif;
+
+      font-size: 12px;
+
+      font-weight: 600;
+
+      letter-spacing: 0.5px;
+
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+
+    #resetBtn:hover {
+      background: rgba(30, 58, 138, 0.08);
+    }
+
+
+    /* =========================
        ANIMATIONS
     ========================== */
 
@@ -575,6 +611,10 @@
 
       <button id="sendBtn" type="submit">
         Send
+      </button>
+
+      <button id="resetBtn" type="button" title="Start a fresh conversation">
+        Reset
       </button>
 
     </form>
@@ -932,6 +972,81 @@
      */
 
     input.focus();
+
+
+    /* =========================
+       RESET CONVERSATION
+    ========================== */
+
+    const resetBtn =
+      document.getElementById("resetBtn");
+
+    resetBtn.addEventListener(
+      "click",
+      function () {
+
+        /*
+         * Clear conversation history sent to the backend
+         */
+
+        history = [];
+
+
+        /*
+         * Clear the chat window
+         */
+
+        chatBox.innerHTML = "";
+
+
+        /*
+         * Re-add the opening Vijayan message,
+         * matching the page's initial state
+         */
+
+        const message =
+          document.createElement("div");
+
+        message.className =
+          "message vijayan";
+
+        const bubble =
+          document.createElement("div");
+
+        bubble.className =
+          "bubble notranslate";
+
+        bubble.setAttribute(
+          "translate",
+          "no"
+        );
+
+        bubble.textContent =
+          "എടാ ദാസാ... എന്തുണ്ട് വിശേഷം?";
+
+        const time =
+          document.createElement("span");
+
+        time.className = "time";
+
+        const now = new Date();
+
+        time.textContent =
+          now.toLocaleTimeString(
+            [],
+            { hour: "numeric", minute: "2-digit" }
+          );
+
+        bubble.appendChild(time);
+        message.appendChild(bubble);
+        chatBox.appendChild(message);
+
+
+        input.value = "";
+        input.focus();
+
+      }
+    );
 
   </script>
 

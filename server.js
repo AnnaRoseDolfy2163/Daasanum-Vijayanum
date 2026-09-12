@@ -80,8 +80,12 @@ app.post('/chat', async (req, res) => {
   }
 });
 
-// Start listening
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-  console.log(`POST /chat endpoint ready`);
-});
+// Start listening (only when run directly, not on Vercel)
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+    console.log(`POST /chat endpoint ready`);
+  });
+}
+
+module.exports = app;
