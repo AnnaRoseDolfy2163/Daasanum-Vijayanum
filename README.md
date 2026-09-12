@@ -62,12 +62,15 @@ For Software:
 
 # Screenshots 
 <img width="1600" height="767" alt="image" src="https://github.com/user-attachments/assets/0194fb1e-f697-476f-957b-aa91e5358e40" />
+
 *Landing page-about*
 
 <img width="1600" height="768" alt="image" src="https://github.com/user-attachments/assets/7c8f6e12-ea8f-4315-a4e0-fdbd79eac551" />
-*Landing page-hero"
+
+*Landing page-hero*
 
 <img width="1600" height="763" alt="image" src="https://github.com/user-attachments/assets/dd8b863a-4fe8-4c0e-aff8-dc9f369d7e5f" />
+
 *Chat mid-conversation, showing escalation across turns*
 
 <img width="702" height="1600" alt="image" src="https://github.com/user-attachments/assets/f8fb81fb-a051-4413-a138-c02336da7d01" />
