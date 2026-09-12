@@ -17,6 +17,11 @@ if (!process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY === 'your_openai_a
   console.warn('⚠️  Warning: OPENAI_API_KEY is not configured in .env');
 }
 
+// GET /chat redirects to /chat.html
+app.get('/chat', (req, res) => {
+  res.redirect('/chat.html');
+});
+
 // POST /chat
 app.post('/chat', async (req, res) => {
   try {
