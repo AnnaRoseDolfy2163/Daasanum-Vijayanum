@@ -69,33 +69,17 @@ For Software:
 *Mobile view of the chat window*
 
 # Diagrams
-Landing page
-User clicks Go to chatbot
-↓
-Chat page
-Types Eda Vijaya to start
-↓
-POST /chat request
-Sends full conversation history
-↓
-Express server
-Adds Vijayan persona prompt
-↓
-OpenAI API
-Generates escalated reply
-↓
-Browser renders reply
-Shown as Vijayan bubble
+Landing page ➔ User clicks Go to chatbot ➔ Chat page ➔ Types Eda Vijaya to start ➔ POST /chat request ➔ Express server (prepends Vijayan persona prompt) ➔ OpenAI API ➔ Response rendered as Vijayan bubble.
+
 ### Project Demo
 # Video
-[Add your demo video link here]
-https://drive.google.com/file/d/1H0aAz_9TlkpstzUis98WP_wM9KMKxdyw/view?usp=drivesdk
+[Demo Video Link](https://drive.google.com/file/d/1H0aAz_9TlkpstzUis98WP_wM9KMKxdyw/view?usp=drivesdk)
 
 # Additional Demos
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- Anna Rose Dolphy: [Tink Her Hack 4.0 Top 50]
+- Anna Rose Dolfy: [Tink Her Hack 4.0 Top 50]
 - Emil Elsa Biji: [Tink Her Hack 4.0 Top 50]
 
 ---
